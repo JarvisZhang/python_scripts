@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>netease mail</title>
+
+</head>
+<body>
+<br><div><table id="background-table" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f5f5f5; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt" cellpadding="0" cellspacing="0" width="100%"> 
+             
+            <tbody><tr> 
+                <td id="header-pattern-container" style="padding: 0px; border-collapse: collapse; padding: 10px 20px"> 
+                    <table id="header-pattern" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt" border="0" cellpadding="0" cellspacing="0"> 
+                        <tbody><tr> 
+                            <td id="header-avatar-image-container" style="padding: 0px; border-collapse: collapse; vertical-align: top; width: 32px; padding-right: 8px" valign="top"> <img id="header-avatar-image" class="image_fix" src="cid:BE7D58A9@07FC5F44.89C03353" style="border-radius: 3px; vertical-align: top" height="32" border="0" width="32"> 
+                            </td> 
+                            <td id="header-text-container" style="padding: 0px; border-collapse: collapse; vertical-align: middle; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; mso-line-height-rule: exactly; mso-text-raise: 1px" valign="middle"> <a class="user-hover" rel="Ted" id="email_Ted" href="http://localhost:8080/secure/ViewProfile.jspa?name=Ted" style="color:#3b73af;; color: #3b73af; text-decoration: none">Ted Mosby</a> <strong>updated</strong> <a href="http://localhost:8080/browse/COM-7" style="color: #3b73af; text-decoration: none"><img src="cid:00C5A413@07FC5F44.89C03353" height="16" align="absmiddle" border="0" width="16"> COM-7</a> 
+                            </td> 
+                        </tr> 
+                    </tbody></table> 
+                </td> 
+            </tr> 
+            <tr> 
+                <td id="email-content-container" style="padding: 0px; border-collapse: collapse; padding: 0 20px"> 
+                    <table id="email-content-table" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: separate" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+                        <tbody><tr> 
+                             
+                            <td class="email-content-rounded-top mobile-expand" style="padding: 0px; border-collapse: collapse; color: #fff; padding: 0 15px 0 16px; height: 15px; background-color: #fff; border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 0; border-top-right-radius: 5px; border-top-left-radius: 5px; height: 10px; line-height: 10px; padding: 0 15px 0 16px; mso-line-height-rule: exactly">
+                                &nbsp;
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td class="email-content-main mobile-expand " style="padding: 0px; border-collapse: collapse; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-top: 0; border-bottom: 0; padding: 0 15px 0 16px; background-color: #fff"> 
+                                <table class="page-title-pattern" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+                                    <tbody><tr> 
+                                        <td class="page-title-pattern-first-line " style="padding: 0px; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; padding-top: 10px"> <a href="http://localhost:8080/browse/COM" style="color: #3b73af; text-decoration: none">Compile</a> / <a href="http://localhost:8080/browse/COM-7" style="color: #3b73af; text-decoration: none"><img src="cid:00C5A413@07FC5F44.89C03353" style="vertical-align: text-bottom" height="16" align="absmiddle" border="0" width="16"></a> <a href="http://localhost:8080/browse/COM-7" style="color: #3b73af; text-decoration: none">COM-7</a> 
+                                        </td> 
+                                    </tr> 
+                                    <tr> 
+                                        <td style="vertical-align: top;; padding: 0px; border-collapse: collapse; padding-right: 5px; font-size: 20px; line-height: 30px; mso-line-height-rule: exactly" class="page-title-pattern-header-container"> <span class="page-title-pattern-header" style="font-family: Arial, sans-serif; padding: 0; font-size: 20px; line-height: 30px; mso-text-raise: 2px; mso-line-height-rule: exactly; vertical-align: middle"> <a href="http://localhost:8080/browse/COM-7" style="color: #3b73af; text-decoration: none">generate gitview report</a> </span> 
+                                        </td> 
+                                    </tr> 
+                                </tbody></table> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td class="email-content-main mobile-expand  wrapper-special-margin" style="padding: 0px; border-collapse: collapse; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-top: 0; border-bottom: 0; padding: 0 15px 0 16px; background-color: #fff; padding-top: 10px; padding-bottom: 5px"> 
+                                <table class="keyvalue-table" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt"> 
+                                    <tbody><tr> 
+                                        <th style="color: #707070; font: normal 14px/20px Arial, sans-serif; text-align: left; vertical-align: top; padding: 2px 0">
+                                            Change By:
+                                        </th> 
+                                        <td style="padding: 0px; border-collapse: collapse; font: normal 14px/20px Arial, sans-serif; padding: 2px 0 2px 5px; vertical-align: top"> <a class="user-hover" rel="Ted" id="email_Ted" href="http://localhost:8080/secure/ViewProfile.jspa?name=Ted" style="color:#3b73af;; color: #3b73af; text-decoration: none">Ted Mosby</a> 
+                                        </td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th style="color: #707070; font: normal 14px/20px Arial, sans-serif; text-align: left; vertical-align: top; padding: 2px 0">
+                                            Resolution:
+                                        </th> 
+                                        <td style="padding: 0px; border-collapse: collapse; font: normal 14px/20px Arial, sans-serif; padding: 2px 0 2px 5px; vertical-align: top"> <span class="diffaddedchars" style="background-color:#ddfade;">Done</span> 
+                                        </td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th style="color: #707070; font: normal 14px/20px Arial, sans-serif; text-align: left; vertical-align: top; padding: 2px 0">
+                                            Status:
+                                        </th> 
+                                        <td style="padding: 0px; border-collapse: collapse; font: normal 14px/20px Arial, sans-serif; padding: 2px 0 2px 5px; vertical-align: top"> <span class="diffremovedchars" style="background-color:#ffe7e7;text-decoration:line-through;">To Do</span> <span class="diffaddedchars" style="background-color:#ddfade;">Done</span> 
+                                        </td> 
+                                    </tr> 
+                                </tbody></table> 
+                            </td> 
+                        </tr> 
+                        <tr> 
+                            <td class="email-content-main mobile-expand " style="padding: 0px; border-collapse: collapse; border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-top: 0; border-bottom: 0; padding: 0 15px 0 16px; background-color: #fff"> 
+                                <table id="actions-pattern" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; mso-line-height-rule: exactly; mso-text-raise: 1px" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+                                    <tbody><tr> 
+                                        <td id="actions-pattern-container" style="padding: 0px; border-collapse: collapse; padding: 10px 0 10px 24px; vertical-align: middle; padding-left: 0" valign="middle"> 
+                                            <table style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt" align="left"> 
+                                                <tbody><tr> 
+                                                    <td class="actions-pattern-action-icon-container" style="padding: 0px; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; mso-line-height-rule: exactly; mso-text-raise: 0px; vertical-align: middle"> <a href="http://localhost:8080/browse/COM-7#add-comment" target="_blank" title="Add Comment" style="color: #3b73af; text-decoration: none"> <img class="actions-pattern-action-icon-image" src="cid:25C89157@07FC5F44.89C03353" title="Add Comment" style="vertical-align: middle" height="16" border="0" width="16"> </a> 
+                                                    </td> 
+                                                    <td class="actions-pattern-action-text-container" style="padding: 0px; border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; mso-line-height-rule: exactly; mso-text-raise: 4px; padding-left: 5px"> <a href="http://localhost:8080/browse/COM-7#add-comment" target="_blank" title="Add Comment" style="color: #3b73af; text-decoration: none">Add Comment</a> 
+                                                    </td> 
+                                                </tr> 
+                                            </tbody></table> 
+                                        </td> 
+                                    </tr> 
+                                </tbody></table> 
+                            </td> 
+                        </tr> 
+                         
+                        <tr> 
+                            <td class="email-content-rounded-bottom mobile-expand" style="padding: 0px; border-collapse: collapse; color: #fff; padding: 0 15px 0 16px; height: 5px; line-height: 5px; background-color: #fff; border-top: 0; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; mso-line-height-rule: exactly">
+                                &nbsp;
+                            </td> 
+                        </tr> 
+                    </tbody></table> 
+                </td> 
+            </tr> 
+            <tr> 
+                <td id="footer-pattern" style="padding: 0px; border-collapse: collapse; padding: 12px 20px"> 
+                    <table id="footer-pattern-container" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt" border="0" cellpadding="0" cellspacing="0"> 
+                        <tbody><tr> 
+                            <td id="footer-pattern-text" class="mobile-resize-text" style="padding: 0px; border-collapse: collapse; color: #999; font-size: 12px; line-height: 18px; font-family: Arial, sans-serif; mso-line-height-rule: exactly; mso-text-raise: 2px" width="100%">
+                                 This message was sent by Atlassian JIRA <span id="footer-build-information">(v6.2.1#6256-<span title="f72b2831aad07cd856610541aa2dab76488bde7f" data-commit-id="f72b2831aad07cd856610541aa2dab76488bde7f}">sha1:f72b283</span>)</span> 
+                            </td> 
+                            <td id="footer-pattern-logo-desktop-container" style="padding: 0px; border-collapse: collapse; padding-left: 20px; vertical-align: top" valign="top"> 
+                                <table style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt"> 
+                                    <tbody><tr> 
+                                        <td id="footer-pattern-logo-desktop-padding" style="padding: 0px; border-collapse: collapse; padding-top: 3px"> <img id="footer-pattern-logo-desktop" src="cid:7408119D@07FC5F44.89C03353" title="Atlassian logo" class="image_fix" height="36" width="169"> 
+                                        </td> 
+                                    </tr> 
+                                </tbody></table> 
+                            </td> 
+                        </tr> 
+                    </tbody></table> 
+                </td> 
+            </tr> 
+        </tbody></table></div>
+<style type="text/css">
+.netease-attDown{ width:430px;height:auto;background-color:#F6F9FC;border:#C5D2DA 1px solid;padding:12px;line-height:160%;font-size:12px;white-space:nowrap;font-family:Verdana}
+.netease-attDown-tit{ color:#A0A0A0 }
+.netease-attDown-tit strong{ color:#008000 }
+.netease-attDown a{ color:#0669B2}
+.netease-attDown dl,
+.netease-attDown dt,
+.netease-attDown dd{ margin:0;padding:0;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.netease-attDown dt{ font-weight:bold;color:#333;margin-top:8px}
+.netease-attDown dt .info{ color:#999;font-weight:normal}
+</style>
+
+<div class="netease-attDown">
+	<div class="netease-attDown-tit"> <strong>4</strong> attachments</div>
+	
+		<dl>
+			<dt title="7408119D@07FC5F44.89C03353">7408119D@07FC5F44.89C03353<span class="info">(3K)</span></dt>
+			<dd>
+				<a href="http://preview.mail.126.com/xdownload?filename=7408119D%4007FC5F44.89C03353&mid=1tbiVw1b8U3mHg6WtgABsq&part=3&sign=34ffcc7c026914230dd85a5ee762153f&time=1395909654&uid=gitview%40126.com" target="_blank">download</a>
+				
+			</dd>
+		</dl>
+	
+		<dl>
+			<dt title="25C89157@07FC5F44.89C03353">25C89157@07FC5F44.89C03353<span class="info">(2K)</span></dt>
+			<dd>
+				<a href="http://preview.mail.126.com/xdownload?filename=25C89157%4007FC5F44.89C03353&mid=1tbiVw1b8U3mHg6WtgABsq&part=4&sign=34ffcc7c026914230dd85a5ee762153f&time=1395909654&uid=gitview%40126.com" target="_blank">download</a>
+				
+			</dd>
+		</dl>
+	
+		<dl>
+			<dt title="00C5A413@07FC5F44.89C03353">00C5A413@07FC5F44.89C03353<span class="info">(2K)</span></dt>
+			<dd>
+				<a href="http://preview.mail.126.com/xdownload?filename=00C5A413%4007FC5F44.89C03353&mid=1tbiVw1b8U3mHg6WtgABsq&part=5&sign=34ffcc7c026914230dd85a5ee762153f&time=1395909654&uid=gitview%40126.com" target="_blank">download</a>
+				
+			</dd>
+		</dl>
+	
+		<dl>
+			<dt title="BE7D58A9@07FC5F44.89C03353">BE7D58A9@07FC5F44.89C03353<span class="info">(2K)</span></dt>
+			<dd>
+				<a href="http://preview.mail.126.com/xdownload?filename=BE7D58A9%4007FC5F44.89C03353&mid=1tbiVw1b8U3mHg6WtgABsq&part=6&sign=34ffcc7c026914230dd85a5ee762153f&time=1395909654&uid=gitview%40126.com" target="_blank">download</a>
+				
+			</dd>
+		</dl>
+	
+</div>
+
+</body>
+</html>
