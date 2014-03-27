@@ -74,9 +74,18 @@ class My_Imap(object):
                 typ, mail_data = self.imap.fetch(id, '(RFC822)')
                 email_msg = email.message_from_string(mail_data[0][1])
                 subject, encode = email.Header.decode_header(email_msg['subject'])[0]
+                if encode == 'gb18030':
+                    subject = subject.decode('gb2312').encode('utf8')
                 if self.is_from_jira(subject):
-                    
-            
+                    for part in email_msg.walk():
+                        if part.get_content_type() == 'text/html':
+                            body = part.get_payload(decode = True)
+                            body_encode = part.get_content_charset()
+                            if body_encode == 'gb2312' or body_encode == 'gb18030':
+                                body = body.decode('gb2312')
+                            else:
+                                body = body.decode('utf8')
+                            self.emails_body.append(body)
         except Exception, error:
             print 'failed to fetch new mails'
             print 'error: %s' % error
