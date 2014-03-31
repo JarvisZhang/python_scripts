@@ -1,63 +1,18 @@
+# coding: utf-8
 import imaplib
 import email
-from email import parser
+from HTMLParser import HTMLParser
 
 HOST_ADDRESS = 'imap.126.com'
 USERNAME = 'gitview'
 PASSWORD = 'gitviewtest'
-
-def draft_imap():
-    M = imaplib.IMAP4('imap.126.com')
-    M.login('gitview', 'gitviewtest')
-    M.select()
-    typ, data = M.search(None, 'ALL')
-    for num in data[0].split():
-        typ, data = M.fetch(num, '(RFC822)')
-    #     print 'Message %s\n%s\n' % (num, data[0][1])
-        msg=email.message_from_string(data[0][1])
-        content=msg.get_payload(decode=True)
-        print msg
-    M.close()
-    M.logout()
-   
-
-def test_imap():
-    imap=imaplib.IMAP4('imap.126.com')
-    imap.debug=3
-    imap.login('gitview', 'gitviewtest')
-    imap.select()
-    result, all_data=imap.search(None,'ALL')
-    for num in all_data[0].split():
-        typ,data=imap.fetch(num, '(RFC822)')
-        emsg=email.message_from_string(data[0][1])
-        subject,ecode=email.Header.decode_header(emsg["subject"])[0]
-        fromuser=email.utils.parseaddr(emsg.get("from"))[1]
-        if ecode=='gb18030':
-            subject=subject.decode('gb2312').encode('utf8')
-        for part in emsg.walk():
-            print part.get_content_type()
-            if part.get_content_type()=="text/html":
-                body=part.get_payload(decode=True)
-                mailtype=part.get_content_charset()
-                if mailtype=='gb2312' or mailtype=='gb18030':
-                    body=body.decode('gb2312').encode('utf-8')
-                else:
-                    body=body.decode('utf-8')
-                f = open('body.txt', 'w')
-                f.write(body)
-                print body
-#                 break
-    imap.logout()
-    #imap.close()
-    print "over"
     
 
 class My_Imap(object):
-    imap = object
-    emails_body = []
-    
+        
     def __init__(self, host_address, username, password):
         try:
+            self.parser = My_JIRA_Html_Parser()
             self.imap = imaplib.IMAP4(host_address)
             self.imap.debug = 3
             self.imap.login(username, password)
@@ -76,24 +31,117 @@ class My_Imap(object):
                 subject, encode = email.Header.decode_header(email_msg['subject'])[0]
                 if encode == 'gb18030':
                     subject = subject.decode('gb2312').encode('utf8')
-                if self.is_from_jira(subject):
+                if self.__is_from_jira(subject):
                     for part in email_msg.walk():
-                        if part.get_content_type() == 'text/html':
+                        if part.get_content_type() == 'text/html':#part.get_content_type() == 'text/plain' or 
                             body = part.get_payload(decode = True)
-                            body_encode = part.get_content_charset()
-                            if body_encode == 'gb2312' or body_encode == 'gb18030':
-                                body = body.decode('gb2312')
-                            else:
-                                body = body.decode('utf8')
-                            self.emails_body.append(body)
+#                             body_encode = part.get_content_charset()
+#                             if body_encode == 'gb2312' or body_encode == 'gb18030':
+#                                 body = body.decode('gb2312')
+#                             elif body_encode == 'utf8':
+#                                 body = body.decode('utf8')
+                            break
+                    self.parser.feed(body)
+                    print self.parser.project_name, self.parser.issue_name, self.parser.sprint_name, self.parser.issue_status
+                    self.parser.clear()
         except Exception, error:
-            print 'failed to fetch new mails'
+            print 'failed to fetch new mails'   
             print 'error: %s' % error
+            
+    def close(self):
+        self.imap.close()
+        self.imap.logout()
 
-    def is_from_jira(self, subject):
+    def __is_from_jira(self, subject):
         return True
+    
+
+class My_JIRA_Html_Parser(HTMLParser):
+    project_name = ''
+    issue_name = ''
+    sprint_name = ''
+    issue_status = ''
+    table_count = 0
+    read_info = 0
+    read_first_table = False
+    read_info_start = False
+    read_project_start = False
+    read_issue_start = False
+    read_second_table = False
+    read_detail_judge = False
+    read_status_start = False
+    read_detail_start = False
+    read_sprint_start = False
+    
+    def handle_starttag(self, tag, attrs):
+        if tag == 'table':
+            self.table_count += 1
+            if self.table_count == 4:
+                self.read_first_table = True
+            elif self.table_count == 5:
+                self.read_second_table = True
+        elif self.read_first_table and tag == 'td':
+            self.read_info_start = True
+        elif self.read_info_start and tag == 'a':
+            self.read_info += 1
+            if self.read_info == 1:
+                self.read_project_start = True
+            elif self.read_info == 3:
+                self.read_issue_start = True
+        elif self.read_second_table and tag == 'th':
+            self.read_detail_judge = True
+        elif (self.read_status_start or self.read_sprint_start) and tag == 'span':
+            for attr in attrs:
+                if 'diffaddedchars' in attr:
+                    self.read_detail_start = True
+    
+    def handle_data(self, data):
+        if self.read_project_start:
+            self.project_name = data
+            self.read_project_start = False
+        elif self.read_issue_start:
+            self.issue_name = data
+            self.read_issue_start = False
+            self.read_info_start = False
+            self.read_first_table = False
+        elif self.read_detail_judge:
+            data = data.strip()
+            if data == 'Status:':
+                self.read_status_start = True
+                self.read_detail_judge = False
+                self.read_second_table = False
+            elif data == 'Sprint:':
+                self.read_sprint_start = True
+                self.read_detail_judge = False
+                self.read_second_table = False
+        elif self.read_detail_start:
+            if self.read_status_start:
+                self.issue_status = data.strip()
+                self.read_status_start = False
+            elif self.read_sprint_start:
+                self.sprint_name = data.strip()
+                self.read_sprint_start = False
+                
+    def clear(self):
+        self.project_name = ''
+        self.issue_name = ''
+        self.sprint_name = ''
+        self.issue_status = ''
+        self.table_count = 0
+        self.read_info = 0
+        self.read_first_table = False
+        self.read_info_start = False
+        self.read_project_start = False
+        self.read_issue_start = False
+        self.read_second_table = False
+        self.read_detail_judge = False
+        self.read_status_start = False
+        self.read_detail_start = False
+        self.read_sprint_start = False
+    
 
 if __name__ == '__main__':
     mail_process = My_Imap(HOST_ADDRESS, USERNAME, PASSWORD)
     mail_process.refresh_unseen()
-    
+    mail_process.close()
+            
